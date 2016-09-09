@@ -1,5 +1,6 @@
 # ACF Section Styles Field
 
+An ACF Pro field to configure styles for a section, built as a WordPress plugin.
 
 -----------------------
 
