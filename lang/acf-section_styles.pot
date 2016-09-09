@@ -1,0 +1,188 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Advanced Custom Fields: Section Styles\n"
+"POT-Creation-Date: 2016-09-08 16:23-0600\n"
+"PO-Revision-Date: 2016-09-08 16:22-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: acf-section_styles.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: fields/acf-section_styles-v5.php:30
+msgid "Section Styles"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:33
+msgid "Select background image"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:34
+msgid "Select image"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:53
+msgid "Solid"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:54
+msgid "Dotted"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:55
+msgid "Dashed"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:56
+msgid "Double"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:57
+msgid "Groove"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:58
+msgid "Ridge"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:59
+msgid "Inset"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:60
+msgid "Outset"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:63
+msgid "Theme Default"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:64
+msgid "Cover"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:65
+msgid "Contain"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:66
+msgid "No Repeat"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:67
+msgid "Repeat"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:95
+msgid "Default Margins"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:100 fields/acf-section_styles-v5.php:146
+#: fields/acf-section_styles-v5.php:215
+msgid "top"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:111 fields/acf-section_styles-v5.php:157
+#: fields/acf-section_styles-v5.php:226
+msgid "right"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:122 fields/acf-section_styles-v5.php:168
+#: fields/acf-section_styles-v5.php:237
+msgid "bottom"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:133 fields/acf-section_styles-v5.php:179
+#: fields/acf-section_styles-v5.php:248
+msgid "left"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:141
+msgid "Default Borders"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:187
+msgid "Default Border Style"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:210
+msgid "Default Padding"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:256
+msgid "Default Background Style"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:326
+msgid "margin"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:337
+msgid "border"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:348
+msgid "padding"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:369
+msgid "Border Style"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:383
+msgid "Border Color"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:392
+msgid "Background Color"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:419
+msgid "Background Image"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:426
+msgid "Remove selected image"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:430
+msgid "Background Style"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:443
+msgid "No image selected"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:443
+msgid "Add Image"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Advanced Custom Fields: Section Styles"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://www.ractoon.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Adds a field to configure styles including padding, border, margin, and "
+"backgrounds."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ractoon"
+msgstr ""
