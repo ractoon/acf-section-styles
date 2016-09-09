@@ -1,12 +1,10 @@
 # ACF Section Styles Field
 
-An ACF Pro field to configure styles for a section, built as a WordPress plugin.
-
------------------------
-
-### Description
+Adds a field to configure styles including padding, border, margin, and backgrounds.
 
 ![ACF PRO Section Styles Field Screenshot](/assets/images/acf-pro-section-styles-field.png?raw=true)
+
+### Description
 
 Allows you to set defaults for margin, border size, border color, border style, padding, background color, and background style on creation. Creates controls to configure:
 
@@ -94,8 +92,8 @@ This ACF field type is compatible with:
 
 ### Installation
 
-1. Copy the `acf-section_styles` folder into your `wp-content/plugins` folder
-2. Activate the acf-section_styles plugin via the plugins admin page
+1. Copy the plugin folder into your `wp-content/plugins` folder
+2. Activate the plugin via the plugins admin page
 3. Create a new field via ACF and select the Section Styles type
 4. Please refer to the description for more info regarding the field type settings
 

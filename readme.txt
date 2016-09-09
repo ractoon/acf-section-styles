@@ -6,7 +6,7 @@ Tested up to: 4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-An ACF PRO field to configure styles for a section.
+Adds a field to configure styles including padding, border, margin, and backgrounds.
 
 == Description ==
 
