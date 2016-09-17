@@ -8,14 +8,14 @@
 				g = parseInt(hexcolor.substr(2,2),16),
 				b = parseInt(hexcolor.substr(4,2),16),
 				yiq = ((r*299)+(g*587)+(b*114))/1000;
-	  
-	  return (yiq >= 128) ? 'light' : 'dark';
+
+		return (yiq >= 128) ? 'light' : 'dark';
 	}
 
 	function getOptimalTextColor(hexcolor) {
 		return getContrastYIQ(hexcolor) == 'dark' ? '#fff' : '#444';
 	}
-	
+
 	function initialize_field( $el ) {
 
 		// initialize container elements and labels
@@ -28,13 +28,13 @@
 		var backgroundColorPicker = $('.acf-section-styles-background-color', $el),
 				backgroundColor = backgroundColorPicker.val(),
 				backgroundTextColor = '#444';
-		
+
 		if ( backgroundColor !== '' ) {
 			backgroundTextColor = getOptimalTextColor(backgroundColor);
 		}
 
 		backgroundContainerLabel.css('color', backgroundTextColor);
-		
+
 		// initialize label color for border
 		var borderColorPicker = $('.acf-section-styles-border-color', $el),
 				borderColor = borderColorPicker.val(),
@@ -67,9 +67,8 @@
 		$('.acf-section-styles-border-color-container .wp-picker-clear', $el).on('click', function() {
 			var borderContainerEl = $(this).parents('.acf-section-styles-container').find('.acf-section-styles-border'),
 					borderContainerLabel = $('label', borderContainerEl).first();
-
-			borderContainerEl.css( 'background-color', defaultBorderColor);
-			borderContainerLabel.css('color', getOptimalTextColor(defaultBorderColor));
+					borderContainerEl.css( 'background-color', defaultBorderColor);
+					borderContainerLabel.css('color', getOptimalTextColor(defaultBorderColor));
 		});
 
 		// background color picker
@@ -106,23 +105,23 @@
 					backgroundImageInput = $('.acf-section-styles-background-image-input', backgroundImageContainerEl),
 					backgroundImagePreview = $('.acf-section-styles-background-image-preview', backgroundImageContainerEl);
 
-	    file_frame = wp.media.frames.file_frame = wp.media({
-	      title: acf._e( 'section_styles', 'file_select_title' ),
-	      button: {
-	        text: acf._e( 'section_styles', 'file_select_text' )
-	      },
-	      library: { type : 'image' },
-	      multiple: false
-	    });
+			file_frame = wp.media.frames.file_frame = wp.media({
+				title: acf._e( 'section_styles', 'file_select_title' ),
+				button: {
+					text: acf._e( 'section_styles', 'file_select_text' )
+				},
+				library: { type : 'image' },
+				multiple: false
+			});
 
-	    file_frame.on( 'select', function() {
-	      attachment = file_frame.state().get('selection').first().toJSON();
-	    	backgroundImageInput.val(attachment.id);
-	    	backgroundImageContainerEl.addClass('has-value');
-	    	backgroundImagePreview.attr('src', attachment.sizes.medium.url);
-	    });
+			file_frame.on( 'select', function() {
+				attachment = file_frame.state().get('selection').first().toJSON();
+				backgroundImageInput.val(attachment.id);
+				backgroundImageContainerEl.addClass('has-value');
+				backgroundImagePreview.attr('src', attachment.sizes.medium.url);
+			});
 
-	    // Finally, open the modal
+			// Finally, open the modal
 			file_frame.open();
 
 		});
@@ -141,10 +140,10 @@
 		});
 
 	}
-	
 
-	if( typeof acf.add_action !== 'undefined' ) {
-	
+
+	if ( typeof acf.add_action !== 'undefined' ) {
+
 		/*
 		*  ready append (ACF5)
 		*
@@ -158,22 +157,20 @@
 		*  @param	$el (jQuery selection) the jQuery element which contains the ACF fields
 		*  @return	n/a
 		*/
-		
+
 		acf.add_action('ready append', function( $el ){
-			
+
 			// search $el for fields of type 'section_styles'
 			acf.get_fields({ type : 'section_styles'}, $el).each(function() {
-				
 				initialize_field( $(this) );
-
 			});
-			
+
 		});
-		
-		
+
+
 	} else {
-		
-		
+
+
 		/*
 		*  acf/setup_fields (ACF4)
 		*
@@ -188,19 +185,15 @@
 		*
 		*  @return	n/a
 		*/
-		
-		$(document).on('acf/setup_fields', function(e, postbox){
-			
-			$(postbox).find('.field[data-field_type="section_styles"]').each(function(){
-				
-				initialize_field( $(this) );
-				
-			});
-		
-		});
-	
-	
-	}
 
+		$(document).on('acf/setup_fields', function(e, postbox){
+
+			$(postbox).find('.field[data-field_type="section_styles"]').each(function(){
+				initialize_field( $(this) );
+			});
+
+		});
+
+	}
 
 })(jQuery);

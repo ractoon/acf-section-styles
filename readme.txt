@@ -31,5 +31,10 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.0.1 =
+* Code cleanup
+* Border default changed to "none"
+* Returned margin, border, and padding fix for empty values
+
 = 1.0.0 =
 * Initial Release.
