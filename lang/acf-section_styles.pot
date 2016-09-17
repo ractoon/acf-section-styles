@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Advanced Custom Fields: Section Styles\n"
-"POT-Creation-Date: 2016-09-08 16:23-0600\n"
-"PO-Revision-Date: 2016-09-08 16:22-0600\n"
+"POT-Creation-Date: 2016-09-17 14:43-0600\n"
+"PO-Revision-Date: 2016-09-17 14:43-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,107 +20,111 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: fields/acf-section_styles-v5.php:30
+#: fields/acf-section_styles-v5.php:27
 msgid "Section Styles"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:33
+#: fields/acf-section_styles-v5.php:31
 msgid "Select background image"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:34
+#: fields/acf-section_styles-v5.php:32
 msgid "Select image"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:53
-msgid "Solid"
+msgid "None"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:54
-msgid "Dotted"
+msgid "Solid"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:55
-msgid "Dashed"
+msgid "Dotted"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:56
-msgid "Double"
+msgid "Dashed"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:57
-msgid "Groove"
+msgid "Double"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:58
-msgid "Ridge"
+msgid "Groove"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:59
-msgid "Inset"
+msgid "Ridge"
 msgstr ""
 
 #: fields/acf-section_styles-v5.php:60
+msgid "Inset"
+msgstr ""
+
+#: fields/acf-section_styles-v5.php:61
 msgid "Outset"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:63
+#: fields/acf-section_styles-v5.php:65
 msgid "Theme Default"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:64
+#: fields/acf-section_styles-v5.php:66
 msgid "Cover"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:65
+#: fields/acf-section_styles-v5.php:67
 msgid "Contain"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:66
+#: fields/acf-section_styles-v5.php:68
 msgid "No Repeat"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:67
+#: fields/acf-section_styles-v5.php:69
 msgid "Repeat"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:95
+#: fields/acf-section_styles-v5.php:97
 msgid "Default Margins"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:100 fields/acf-section_styles-v5.php:146
-#: fields/acf-section_styles-v5.php:215
+#: fields/acf-section_styles-v5.php:102 fields/acf-section_styles-v5.php:148
+#: fields/acf-section_styles-v5.php:217
 msgid "top"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:111 fields/acf-section_styles-v5.php:157
-#: fields/acf-section_styles-v5.php:226
+#: fields/acf-section_styles-v5.php:113 fields/acf-section_styles-v5.php:159
+#: fields/acf-section_styles-v5.php:228
 msgid "right"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:122 fields/acf-section_styles-v5.php:168
-#: fields/acf-section_styles-v5.php:237
+#: fields/acf-section_styles-v5.php:124 fields/acf-section_styles-v5.php:170
+#: fields/acf-section_styles-v5.php:239
 msgid "bottom"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:133 fields/acf-section_styles-v5.php:179
-#: fields/acf-section_styles-v5.php:248
+#: fields/acf-section_styles-v5.php:135 fields/acf-section_styles-v5.php:181
+#: fields/acf-section_styles-v5.php:250
 msgid "left"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:141
+#: fields/acf-section_styles-v5.php:143
 msgid "Default Borders"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:187
+#: fields/acf-section_styles-v5.php:189
 msgid "Default Border Style"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:210
+#: fields/acf-section_styles-v5.php:212
 msgid "Default Padding"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:256
+#: fields/acf-section_styles-v5.php:258
 msgid "Default Background Style"
 msgstr ""
 
@@ -128,43 +132,43 @@ msgstr ""
 msgid "margin"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:337
+#: fields/acf-section_styles-v5.php:338
 msgid "border"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:348
+#: fields/acf-section_styles-v5.php:350
 msgid "padding"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:369
+#: fields/acf-section_styles-v5.php:374
 msgid "Border Style"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:383
+#: fields/acf-section_styles-v5.php:388
 msgid "Border Color"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:392
+#: fields/acf-section_styles-v5.php:397
 msgid "Background Color"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:419
+#: fields/acf-section_styles-v5.php:425
 msgid "Background Image"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:426
+#: fields/acf-section_styles-v5.php:432
 msgid "Remove selected image"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:430
+#: fields/acf-section_styles-v5.php:436
 msgid "Background Style"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:443
+#: fields/acf-section_styles-v5.php:448
 msgid "No image selected"
 msgstr ""
 
-#: fields/acf-section_styles-v5.php:443
+#: fields/acf-section_styles-v5.php:448
 msgid "Add Image"
 msgstr ""
 
