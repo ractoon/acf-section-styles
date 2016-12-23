@@ -76,10 +76,12 @@
 			hide: true,
 			change: function(event, ui) {
 				var backgroundContainerEl = $(event.target).parents('.acf-section-styles-container').find('.acf-section-styles-padding'),
-						backgroundContainerLabel = $('label', backgroundContainerEl).first();
+						backgroundContainerLabel = $('label', backgroundContainerEl).first(),
+						backgroundImageContainerEl = $(event.target).parents('.acf-section-styles-container').find('.acf-section-styles-background-image-preview-container');
 
 				// change the background-color
 				backgroundContainerEl.css('background-color', ui.color.toString());
+				backgroundImageContainerEl.css('background-color', ui.color.toString());
 
 				// if background is dark lighten up the text
 				backgroundContainerLabel.css('color', getOptimalTextColor(ui.color.toString()));
@@ -88,9 +90,11 @@
 
 		$('.acf-section-styles-background-color-container .wp-picker-clear', $el).on('click', function() {
 			var backgroundContainerEl = $(this).parents('.acf-section-styles-container').find('.acf-section-styles-padding'),
-					backgroundContainerLabel = $('label', backgroundContainerEl).first();
+					backgroundContainerLabel = $('label', backgroundContainerEl).first(),
+					backgroundImageContainerEl = $(this).parents('.acf-section-styles-container').find('.acf-section-styles-background-image-preview-container');
 
 			backgroundContainerEl.css('background-color', defaultBackgroundColor);
+			backgroundImageContainerEl.css('background-color', defaultBackgroundColor);
 			backgroundContainerLabel.css('color', getOptimalTextColor(defaultBackgroundColor));
 		});
 

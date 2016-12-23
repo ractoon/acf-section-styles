@@ -31,6 +31,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.1.0 =
+* Background image applies background color in preview (visible on transparent background images)
+
 = 1.0.1 =
 * Code cleanup
 * Border default changed to "none"

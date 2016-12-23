@@ -103,6 +103,10 @@
 	display: block;
 }
 
+.acf-section-styles-background-image-preview-container {
+	display: inline-block;
+}
+
 .acf-section-styles-background-image-container img {
 	display: block;
 	max-width: 100%;
