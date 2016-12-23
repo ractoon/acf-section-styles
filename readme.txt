@@ -31,6 +31,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.2.0 =
+* Background position settings fields
+
 = 1.1.0 =
 * Background image applies background color in preview (visible on transparent background images)
 

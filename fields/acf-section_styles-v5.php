@@ -69,6 +69,18 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'repeat'		=> __( 'Repeat', 'acf-section_styles' )
 			) );
 
+			$this->background_position_options_1 = apply_filters( 'acf_section_styles_background_position_options_1', array(
+				'top'			=> __( 'Top', 'acf-section_styles' ),
+				'center'	=> __( 'Center', 'acf-section_styles' ),
+				'bottom'	=> __( 'Bottom', 'acf-section_styles' )
+			) );
+
+			$this->background_position_options_2 = apply_filters( 'acf_section_styles_background_position_options_2', array(
+				'left'		=> __( 'Left', 'acf-section_styles' ),
+				'center'	=> __( 'Center', 'acf-section_styles' ),
+				'right'		=> __( 'Right', 'acf-section_styles' )
+			) );
+
 			$this->settings = $settings;
 
 			// do not delete!
@@ -276,6 +288,29 @@ if ( !class_exists('acf_field_section_styles') ) :
 				)
 			), 'tr');
 
+			acf_render_field_wrap(array(
+				'label'					=> __( 'Default Background Position', 'acf-section_styles' ),
+				'type'					=> 'select',
+				'name'					=> 'background_position_1',
+				'choices'				=> $this->background_position_options_1,
+				'prefix'				=> $field['prefix'],
+				'value'					=> $field['background_position_1'],
+				'wrapper'				=> array(
+					'data-name' 	=> 'background-position-wrapper'
+				)
+			), 'tr');
+
+			acf_render_field_wrap(array(
+				'type'					=> 'select',
+				'name'					=> 'background_position_2',
+				'choices'				=> $this->background_position_options_2,
+				'prefix'				=> $field['prefix'],
+				'value'					=> $field['background_position_2'],
+				'wrapper'				=> array(
+					'data-append' => 'background-position-wrapper'
+				)
+			), 'tr');
+
 		}
 
 		/*
@@ -368,28 +403,33 @@ if ( !class_exists('acf_field_section_styles') ) :
 				<!-- Style Options -->
 				<div class="acf-section-styles-options">
 
-					<!-- Border Style -->
-					<div class="acf-section-styles-border-style-container">
-						<div class="acf-label">
-							<label for= ""><?php _e( 'Border Style', 'acf-section_styles' ); ?></label>
-						</div>
+					<div class="acf-section-styles-input-row">
+						<div class="acf-section-styles-input-col-half">
+							<!-- Border Style -->
+							<div class="acf-section-styles-border-style-container">
+								<div class="acf-label">
+									<label for= ""><?php _e( 'Border Style', 'acf-section_styles' ); ?></label>
+								</div>
 
-						<select id="<?php echo $field['id']; ?>_border_style" name="<?php echo esc_attr($field['name']) ?>[border_style]">
-							<?php foreach ( $this->border_options as $v => $label ): ?>
-							<option value="<?php echo $v; ?>"<?php if ( !empty( $field['value']['border_style'] ) && $field['value']['border_style'] == $v ) echo ' selected'; ?>><?php echo $label; ?></option>
-							<?php endforeach; ?>
-						</select>
-					</div>
-					<!-- End Border Style -->
-
-					<!-- Border Color -->
-					<div class="acf-section-styles-border-color-container">
-						<div class="acf-label">
-							<label for= "<?php echo $field['id']; ?>_border_color"><?php _e( 'Border Color', 'acf-section_styles' ); ?></label>
+								<select id="<?php echo $field['id']; ?>_border_style" name="<?php echo esc_attr($field['name']) ?>[border_style]">
+									<?php foreach ( $this->border_options as $v => $label ): ?>
+									<option value="<?php echo $v; ?>"<?php if ( !empty( $field['value']['border_style'] ) && $field['value']['border_style'] == $v ) echo ' selected'; ?>><?php echo $label; ?></option>
+									<?php endforeach; ?>
+								</select>
+							</div>
+							<!-- End Border Style -->
 						</div>
-						<input class="acf-section-styles-border-color" name="<?php echo esc_attr($field['name']) ?>[border_color]" id="<?php echo $field['id']; ?>_border_color" type="text" value="<?php if ( !empty( $field['value']['border_color'] ) ) echo $field['value']['border_color']; ?>" />
+						<div class="acf-section-styles-input-col-half">
+							<!-- Border Color -->
+							<div class="acf-section-styles-border-color-container">
+								<div class="acf-label">
+									<label for= "<?php echo $field['id']; ?>_border_color"><?php _e( 'Border Color', 'acf-section_styles' ); ?></label>
+								</div>
+								<input class="acf-section-styles-border-color" name="<?php echo esc_attr($field['name']) ?>[border_color]" id="<?php echo $field['id']; ?>_border_color" type="text" value="<?php if ( !empty( $field['value']['border_color'] ) ) echo $field['value']['border_color']; ?>" />
+							</div>
+							<!-- End Border Color -->
+						</div>
 					</div>
-					<!-- End Border Color -->
 
 					<!-- Background Color -->
 					<div class="acf-section-styles-background-color-container">
@@ -436,7 +476,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 
 							<div class="acf-section-styles-background-style-container">
 								<div class="acf-label">
-									<label for= ""><?php _e( 'Background Style', 'acf-section_styles' ); ?></label>
+									<label for="<?php echo $field['id']; ?>_background_style"><?php _e( 'Background Style', 'acf-section_styles' ); ?></label>
 								</div>
 
 								<select id="<?php echo $field['id']; ?>_background_style" name="<?php echo esc_attr($field['name']) ?>[background_style]">
@@ -445,6 +485,30 @@ if ( !class_exists('acf_field_section_styles') ) :
 									<?php endforeach; ?>
 								</select>
 							</div>
+
+							<div class="acf-section-styles-background-position-container">
+								<div class="acf-label">
+									<label for="<?php echo $field['id']; ?>_background_position_1"><?php _e( 'Background Position', 'acf-section_styles' ); ?></label>
+								</div>
+
+								<div class="acf-section-styles-input-row">
+									<div class="acf-section-styles-input-col-half">
+										<select id="<?php echo $field['id']; ?>_background_position_1" name="<?php echo esc_attr($field['name']) ?>[background_position_1]" >
+											<?php foreach ( $this->background_position_options_1 as $v => $label ): ?>
+											<option value="<?php echo $v; ?>"<?php if ( !empty( $field['value']['background_position_1'] ) && $field['value']['background_position_1'] == $v ) echo ' selected'; ?>><?php echo $label; ?></option>
+											<?php endforeach; ?>
+										</select>
+									</div>
+									<div class="acf-section-styles-input-col-half">
+										<select id="<?php echo $field['id']; ?>_background_position_2" name="<?php echo esc_attr($field['name']) ?>[background_position_2]" class="acf-section-styles-background-position-1">
+											<?php foreach ( $this->background_position_options_2 as $v => $label ): ?>
+											<option value="<?php echo $v; ?>"<?php if ( !empty( $field['value']['background_position_2'] ) && $field['value']['background_position_2'] == $v ) echo ' selected'; ?>><?php echo $label; ?></option>
+											<?php endforeach; ?>
+										</select>
+									</div>
+								</div>
+							</div>
+
 						</div>
 
 						<div class="view hide-if-value">
@@ -518,6 +582,9 @@ if ( !class_exists('acf_field_section_styles') ) :
 			if ( !empty( $value['background_image'] ) ) {
 				$value['background_image'] = acf_get_attachment( $value['background_image'] );
 			}
+
+			// background position value
+			$value['background_position'] = $value['background_position_1'] . ' ' . $value['background_position_2'];
 
 			// format padding value
 			$value['margin'] = !empty( $value['margin_top'] ) ? $value['margin_top'] : '0';
