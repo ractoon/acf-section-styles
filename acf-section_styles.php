@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Section Styles
 Plugin URI: https://www.ractoon.com
 Description: Adds a field to configure styles including padding, border, margin, and backgrounds.
-Version: 1.2.0
+Version: 1.2.2
 Author: ractoon
 Author URI: https://www.ractoon.com
 License: GPLv2 or later

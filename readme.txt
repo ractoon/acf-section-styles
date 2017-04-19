@@ -31,6 +31,12 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 1.2.2 =
+* Background image undefined fix
+
+= 1.2.1 =
+* Background style additional options
+
 = 1.2.0 =
 * Background position settings fields
 

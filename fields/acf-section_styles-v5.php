@@ -33,20 +33,20 @@ if ( !class_exists('acf_field_section_styles') ) :
 			);
 
 			$this->defaults = array(
-				'margin_top'				=> '0',
+				'margin_top'			=> '0',
 				'margin_right'			=> '0',
 				'margin_bottom'			=> '0',
-				'margin_left'				=> '0',
-				'border_top'				=> '0',
+				'margin_left'			=> '0',
+				'border_top'			=> '0',
 				'border_right'			=> '0',
 				'border_bottom'			=> '0',
-				'border_left'				=> '0',
+				'border_left'			=> '0',
 				'border_style'			=> 'solid',
-				'padding_top'				=> '0',
+				'padding_top'			=> '0',
 				'padding_right'			=> '0',
 				'padding_bottom'		=> '0',
 				'padding_left'			=> '0',
-				'background_style'	=> 'default',
+				'background_style'		=> 'default',
 			);
 
 			$this->border_options = apply_filters( 'acf_section_styles_border_options', array(
@@ -65,20 +65,22 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'default'		=> __( 'Theme Default', 'acf-section_styles' ),
 				'cover'			=> __( 'Cover', 'acf-section_styles' ),
 				'contain'		=> __( 'Contain', 'acf-section_styles' ),
-				'no-repeat'	=> __( 'No Repeat', 'acf-section_styles' ),
-				'repeat'		=> __( 'Repeat', 'acf-section_styles' )
+				'no-repeat'		=> __( 'No Repeat', 'acf-section_styles' ),
+				'repeat'		=> __( 'Repeat', 'acf-section_styles' ),
+				'repeat-x'		=> __( 'Repeat Horizontally', 'acf-section_styles' ),
+				'repeat-y'		=> __( 'Repeat Vertically', 'acf-section_styles' ),
 			) );
 
 			$this->background_position_options_1 = apply_filters( 'acf_section_styles_background_position_options_1', array(
 				'top'			=> __( 'Top', 'acf-section_styles' ),
-				'center'	=> __( 'Center', 'acf-section_styles' ),
-				'bottom'	=> __( 'Bottom', 'acf-section_styles' )
+				'center'		=> __( 'Center', 'acf-section_styles' ),
+				'bottom'		=> __( 'Bottom', 'acf-section_styles' )
 			) );
 
 			$this->background_position_options_2 = apply_filters( 'acf_section_styles_background_position_options_2', array(
-				'left'		=> __( 'Left', 'acf-section_styles' ),
-				'center'	=> __( 'Center', 'acf-section_styles' ),
-				'right'		=> __( 'Right', 'acf-section_styles' )
+				'left'			=> __( 'Left', 'acf-section_styles' ),
+				'center'		=> __( 'Center', 'acf-section_styles' ),
+				'right'			=> __( 'Right', 'acf-section_styles' )
 			) );
 
 			$this->settings = $settings;
@@ -113,7 +115,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'value'					=> $field['margin_top'],
 				'prepend'				=> __( 'top', 'acf-section_styles' ),
 				'wrapper'				=> array(
-					'data-name' 	=> 'margin-wrapper'
+					'data-name' => 'margin-wrapper'
 				)
 			), 'tr');
 
@@ -159,7 +161,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'value'					=> $field['border_top'],
 				'prepend'				=> __( 'top', 'acf-section_styles' ),
 				'wrapper'				=> array(
-					'data-name' 	=> 'border-wrapper'
+					'data-name' => 'border-wrapper'
 				)
 			), 'tr');
 
@@ -205,7 +207,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'prefix'				=> $field['prefix'],
 				'value'					=> $field['border_style'],
 				'wrapper'				=> array(
-					'data-name' 	=> 'border-settings-wrapper'
+					'data-name' => 'border-settings-wrapper'
 				)
 			), 'tr');
 
@@ -228,7 +230,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'value'					=> $field['padding_top'],
 				'prepend'				=> __( 'top', 'acf-section_styles' ),
 				'wrapper'				=> array(
-					'data-name' 	=> 'padding-wrapper'
+					'data-name' => 'padding-wrapper'
 				)
 			), 'tr');
 
@@ -274,7 +276,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'prefix'				=> $field['prefix'],
 				'value'					=> $field['background_style'],
 				'wrapper'				=> array(
-					'data-name' 	=> 'background-settings-wrapper'
+					'data-name' => 'background-settings-wrapper'
 				)
 			), 'tr');
 
@@ -296,7 +298,7 @@ if ( !class_exists('acf_field_section_styles') ) :
 				'prefix'				=> $field['prefix'],
 				'value'					=> $field['background_position_1'],
 				'wrapper'				=> array(
-					'data-name' 	=> 'background-position-wrapper'
+					'data-name' => 'background-position-wrapper'
 				)
 			), 'tr');
 
@@ -448,14 +450,14 @@ if ( !class_exists('acf_field_section_styles') ) :
 
 					$url = '';
 
-					if ( $field['value']['background_image'] ) {
+					if ( !empty( $field['value']['background_image'] ) ) {
 
 						// update vars
-						$url = wp_get_attachment_image_src($field['value']['background_image'], 'medium');
+						$attachment = wp_get_attachment_image_src($field['value']['background_image'], 'medium');
 
 						// url exists
-						if ( $url ) {
-							$url = $url[0];
+						if ( $attachment ) {
+							$url = $attachment[0];
 							$div['class'] .= ' has-value';
 						}
 					}
