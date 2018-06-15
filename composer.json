@@ -1,0 +1,11 @@
+{
+    "name": "ractoon/acf-section-styles",
+    "description": "An ACF Pro field plugin to configure CSS styles including margin, borders, padding, and backgrounds",
+    "type": "wordpress-plugin",
+    "keywords": ["wordpress", "plugin", "acf"],
+    "homepage": "https://github.com/ractoon/acf-section-styles",
+    "license": "GPL-3.0",
+    "require": {
+        "composer/installers": "v1.5.0"
+    }
+}
